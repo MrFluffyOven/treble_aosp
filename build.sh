@@ -28,7 +28,7 @@ initRepos() {
 
 syncRepos() {
     echo "--> Syncing repos"
-    repo sync -c --force-sync --no-clone-bundle --no-tags -j$(nproc --all)
+    repo sync -c --force-sync --no-clone-bundle --no-tags -j6
     echo
 }
 
@@ -68,8 +68,8 @@ buildTrebleApp() {
 buildVanillaVariant() {
     echo "--> Building treble_arm64_bvN"
     lunch treble_arm64_bvN-userdebug
-    make -j$(nproc --all) installclean
-    make -j$(nproc --all) systemimage
+    make -j4 installclean
+    make -j4 systemimage
     mv $OUT/system.img $BD/system-treble_arm64_bvN.img
     echo
 }
@@ -77,8 +77,8 @@ buildVanillaVariant() {
 buildGappsVariant() {
     echo "--> Building treble_arm64_bgN"
     lunch treble_arm64_bgN-userdebug
-    make -j$(nproc --all) installclean
-    make -j$(nproc --all) systemimage
+    make -j4 installclean
+    make -j4 systemimage
     mv $OUT/system.img $BD/system-treble_arm64_bgN.img
     echo
 }
