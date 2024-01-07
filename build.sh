@@ -5,6 +5,7 @@ echo "--------------------------------------"
 echo "          AOSP 14.0 Buildbot          "
 echo "                  by                  "
 echo "                ponces                "
+echo "        edited by MrFluffyOven        "
 echo "--------------------------------------"
 echo
 
