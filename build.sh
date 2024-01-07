@@ -20,8 +20,8 @@ initRepos() {
         echo
 
         echo "--> Preparing local manifest"
-        mkdir -p .repo/local_manifests
-        cp $BL/build/manifest.xml .repo/local_manifests/aosp.xml
+        mkdir -p .repo
+        git clone https://github.com/MrFluffyOven/treble_manifest.git -b arrowgapps .repo/local_manifests
         echo
     fi
 }
