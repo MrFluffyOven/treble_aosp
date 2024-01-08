@@ -22,7 +22,7 @@ initRepos() {
 
         echo "--> Preparing local manifest"
         mkdir -p .repo
-        git clone https://github.com/MrFluffyOven/treble_manifest.git -b mindthegapps .repo/local_manifests
+        git clone https://github.com/MrFluffyOven/treble_manifest.git -b arrowgapps .repo/local_manifests
         echo
     fi
 }
@@ -44,7 +44,7 @@ applyPatches() {
 
     echo "--> Generating makefiles"
     cd device/phh/treble
-    cp $BL/build/aosp.mk .
+    cp $BL/aosp.mk .
     bash generate.sh aosp
     cd ../../..
     echo
