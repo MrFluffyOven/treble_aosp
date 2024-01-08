@@ -75,15 +75,6 @@ buildVanillaVariant() {
     echo
 }
 
-buildGappsVariant() {
-    echo "--> Building treble_arm64_bgN"
-    lunch treble_arm64_bgN-userdebug
-    make -j4 installclean
-    make -j4 systemimage
-    mv $OUT/system.img $BD/system-treble_arm64_bgN.img
-    echo
-}
-
 buildVndkliteVariants() {
     echo "--> Building treble_arm64_bvN-vndklite"
     cd treble_adapter
@@ -104,9 +95,7 @@ generatePackages() {
     buildDate="$(date +%Y%m%d)"
     xz -cv $BD/system-treble_arm64_bvN.img -T0 > $BD/aosp-arm64-ab-vanilla-14.0-$buildDate.img.xz
     xz -cv $BD/system-treble_arm64_bvN-vndklite.img -T0 > $BD/aosp-arm64-ab-vanilla-vndklite-14.0-$buildDate.img.xz
-    xz -cv $BD/system-treble_arm64_bgN.img -T0 > $BD/aosp-arm64-ab-gapps-14.0-$buildDate.img.xz
-    xz -cv $BD/system-treble_arm64_bgN-vndklite.img -T0 > $BD/aosp-arm64-ab-gapps-vndklite-14.0-$buildDate.img.xz
-    rm -rf $BD/system-*.img
+    xz -rf $BD/system-*.img
     echo
 }
 
@@ -121,12 +110,8 @@ generateOta() {
             filename="$(basename $file)"
             if [[ $filename == *"vanilla-vndklite"* ]]; then
                 name="treble_arm64_bvN-vndklite"
-            elif [[ $filename == *"gapps-vndklite"* ]]; then
-                name="treble_arm64_bgN-vndklite"
             elif [[ $filename == *"vanilla"* ]]; then
                 name="treble_arm64_bvN"
-            else
-                name="treble_arm64_bgN"
             fi
             size=$(wc -c $file | awk '{print $1}')
             url="https://github.com/ponces/treble_aosp/releases/download/$version/$filename"
