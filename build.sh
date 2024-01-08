@@ -44,7 +44,7 @@ applyPatches() {
 
     echo "--> Generating makefiles"
     cd device/phh/treble
-    cp $BL/build/aosp.mk .
+    cp $BL/aosp.mk .
     bash generate.sh aosp
     cd ../../..
     echo
