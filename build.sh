@@ -75,26 +75,10 @@ buildVanillaVariant() {
     echo
 }
 
-buildVndkliteVariants() {
-    echo "--> Building treble_arm64_bvN-vndklite"
-    cd treble_adapter
-    sudo bash lite-adapter.sh 64 $BD/system-treble_arm64_bvN.img
-    mv s.img $BD/system-treble_arm64_bvN-vndklite.img
-    sudo rm -rf d tmp
-
-    echo "--> Building treble_arm64_bgN-vndklite"
-    sudo bash lite-adapter.sh 64 $BD/system-treble_arm64_bgN.img
-    mv s.img $BD/system-treble_arm64_bgN-vndklite.img
-    sudo rm -rf d tmp
-    cd ..
-    echo
-}
-
 generatePackages() {
     echo "--> Generating packages"
     buildDate="$(date +%Y%m%d)"
     xz -cv $BD/system-treble_arm64_bvN.img -T0 > $BD/aosp-arm64-ab-vanilla-14.0-$buildDate.img.xz
-    xz -cv $BD/system-treble_arm64_bvN-vndklite.img -T0 > $BD/aosp-arm64-ab-vanilla-vndklite-14.0-$buildDate.img.xz
     xz -rf $BD/system-*.img
     echo
 }
@@ -107,9 +91,6 @@ generateOta() {
     json="{\"version\": \"$version\",\"date\": \"$timestamp\",\"variants\": ["
     find $BD/ -name "aosp-*-14.0-$buildDate.img.xz" | sort | {
         while read file; do
-            filename="$(basename $file)"
-            if [[ $filename == *"vanilla-vndklite"* ]]; then
-                name="treble_arm64_bvN-vndklite"
             elif [[ $filename == *"vanilla"* ]]; then
                 name="treble_arm64_bvN"
             fi
@@ -131,8 +112,6 @@ applyPatches
 setupEnv
 buildTrebleApp
 buildVanillaVariant
-buildGappsVariant
-buildVndkliteVariants
 generatePackages
 generateOta
 
