@@ -39,7 +39,7 @@ applyPatches() {
     echo
 
     echo "--> Applying personal patches"
-    bash $BL/patch.sh $BL personal
+    bash $BL/patch.sh $BL ponces
     echo
 
     echo "--> Generating makefiles"
