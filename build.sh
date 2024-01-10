@@ -38,7 +38,7 @@ applyPatches() {
     bash $BL/patch.sh $BL trebledroid
     echo
 
-    echo "--> Applying personal patches"
+    echo "--> Applying ponces patches"
     bash $BL/patch.sh $BL ponces
     echo
 
