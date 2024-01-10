@@ -13,7 +13,7 @@ set -e
 BL=$PWD/treble_aosp
 BD=$HOME/builds
 TAG="$(date +v%Y.%m.%d)"
-GUSER="ponces"
+GUSER="MrFluffyOven"
 GREPO="treble_aosp"
 
 createRelease() {
