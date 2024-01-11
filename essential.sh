@@ -8,22 +8,16 @@ echo
 
 
 Snap&Curl() {
-echo "--> Installing Snap" 
+echo "--> Installing Snap & Curl" 
 sudo apt-get install snap
-echo
-
-echo "--> Installing Curl"
 snap install curl
 echo 
 }  
 
 
 Git&Repo() {
-echo "--> Installing Git" 
-sudo apt-get install git-all 
-echo
-
-echo "--> Installing REPO" 
+echo "--> Installing Git & Repi" 
+sudo apt-get install git-all  
 sudo apt-get install repo
 echo
 } 
@@ -32,14 +26,8 @@ echo
 Python() {
 echo "--> Installing Python 3.11" 
 sudo apt-get install python3.11
-sudo apt-get install python-is-python3
-echo 
-
-echo "--> Installing Python 3 pip" 
+sudo apt-get install python-is-python3 
 sudo apt-get install python3-pip
-echo
-
-echo "--> Installing Python Lunch" 
 pip3 install lunch
 echo 
 }
