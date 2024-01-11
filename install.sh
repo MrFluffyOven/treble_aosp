@@ -1,6 +1,6 @@
 ## Installer Script
-# github
-sudo apt-get install git-all
+echo "--> Installing Git" 
+sudo apt-get install git-all echo
 # snap
 sudo apt-get install snap
 # repo
