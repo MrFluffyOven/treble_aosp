@@ -1,4 +1,9 @@
-echo "MrFluffyOven Installer Script" 
+echo
+echo "------------------"
+echo " Installer Script "
+echo " by MrFluffyOven  " 
+echo "------------------"
+echo
 
 Tools() {
 echo "--> Installing Unzip" 
