@@ -12,7 +12,7 @@ echo "--> Installing REPO"
 snap install repo
 echo
 
-echo "-->Installing Python 3.11" 
+echo "--> Installing Python 3.11" 
 sudo apt-get install python3.11
 sudo apt-get install python-is-python3
 echo
@@ -41,7 +41,7 @@ echo "--> Installing Python 3 pip"
 sudo apt-get install python3-pip
 echo
 
-echo "Installing Python Lunch" 
+echo "--> Installing Python Lunch" 
 pip3 install lunch
 echo
 
