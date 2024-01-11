@@ -6,6 +6,17 @@ echo "------------------"
 echo
 
 
+Snap&Curl() {
+echo "--> Installing Snap" 
+sudo apt-get install snap
+echo
+
+echo "--> Installing Curl"
+snap install curl
+echo 
+}  
+
+
 Tools() {
 echo "--> Installing Unzip" 
 sudo apt-get install unzip
@@ -23,19 +34,7 @@ echo "--> Installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 echo
-}  
-
-
-
-Snap&Curl() {
-echo "--> Installing Snap" 
-sudo apt-get install snap
-echo
-
-echo "--> Installing Curl"
-snap install curl
-echo 
-}  
+}   
 
 
 Git&Repo() {
@@ -83,8 +82,8 @@ echo
 
 START=$(date +%s)
 
-Tools
 Snap&Curl
+Tools
 Git&Repo
 Python
 Gradle
