@@ -1,4 +1,4 @@
-## Installer Script
+echo "MrFluffyOven Installer Script" 
 
 Tools() {
 echo "--> Installing Unzip" 
