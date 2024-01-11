@@ -17,6 +17,7 @@ snap install curl
 echo 
 }  
 
+
 Git&Repo() {
 echo "--> Installing Git" 
 sudo apt-get install git-all 
