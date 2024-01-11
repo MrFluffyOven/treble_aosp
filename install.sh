@@ -1,37 +1,60 @@
 ## Installer Script
+
 echo "--> Installing Git" 
-sudo apt-get install git-all echo
-# snap
+sudo apt-get install git-all 
+echo
+
+echo "--> Installing Snap" 
 sudo apt-get install snap
-# repo
+echo
+
+echo "--> Installing REPO" 
 snap install repo
-# python3.11
+echo
+
+echo "-->Installing Python 3.11" 
 sudo apt-get install python3.11
-# python-is-python3
 sudo apt-get install python-is-python3
-# open jdk
+echo
+
+echo "--> Installing JDK 11"
 sudo apt-get install openjdk-11-jdk
-# unzip
+echo
+
+echo "--> Installing Unzip" 
 sudo apt-get install unzip
-# visual studio code
+echo
+
+echo "--> Installing Visual Studio Code" 
 snap install code --classic
-# gradle
+echo
+
+echo "--> Installing Gradle 7.2"
 snap install gradle --classic
-# curl
+echo
+
+echo "--> Installing Curl"
 snap install curl
-# pip3
+echo
+
+echo "--> Installing Python 3 pip" 
 sudo apt-get install python3-pip
-#lunch
+echo
+
+echo "Installing Python Lunch" 
 pip3 install lunch
-# github desktop (unofficial)
-sudo wget https://github.com/shiftkey/desktop/releases/download/release-3.2.0-linux1/GitHubDesktop-linux-3.2.0-linux1.deb
-# install
+echo
+
+echo "--> Installing Gdebi" 
 sudo apt-get install gdebi
-# install 2
+echo
+
+echo "--> Installing Github Desktop (Unofficial)" 
+sudo wget https://github.com/shiftkey/desktop/releases/download/release-3.2.0-linux1/GitHubDesktop-linux-3.2.0-linux1.deb
 sudo gdebi GitHubDesktop-linux-3.2.0-linux1.deb
-# flatpak
-sudo apt-get install flatpak
-# chrome
+echo
+
+echo "--> Installing Google Chrome" 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
-# chrome install
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+echo
