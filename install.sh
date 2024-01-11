@@ -41,7 +41,7 @@ sudo gdebi GitHubDesktop-linux-3.2.0-linux1.deb
 echo
 
 echo "--> Installing REPO" 
-snap install repo
+apt install repo
 echo
 } 
 
