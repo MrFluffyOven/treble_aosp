@@ -16,9 +16,10 @@ echo
 
 
 Git&Repo() {
-echo "--> Installing Git & Repi" 
+echo "--> Installing Git & Repo" 
 sudo apt-get install git-all  
 sudo apt-get install repo
+sudo apt-get install git-lfs
 echo
 } 
 
