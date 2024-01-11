@@ -26,6 +26,7 @@ echo
 }  
 
 
+
 Snap&Curl() {
 echo "--> Installing Snap" 
 sudo apt-get install snap
@@ -35,6 +36,7 @@ echo "--> Installing Curl"
 snap install curl
 echo 
 }  
+
 
 Git&Repo() {
 echo "--> Installing Git" 
