@@ -22,7 +22,7 @@ sudo apt-get install git-all
 echo
 
 echo "--> Installing REPO" 
-apt install repo
+sudo apt-get install repo
 echo
 } 
 
