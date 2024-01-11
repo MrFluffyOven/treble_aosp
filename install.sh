@@ -58,3 +58,27 @@ echo "--> Installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 echo
+
+
+START=$(date +%s)
+
+Git
+Snap
+REPO
+Python
+JDK
+CODE
+Gradle
+Curl
+Pip
+Lunch
+Gdebi
+Github
+Chrome
+
+END=$(date +%s)
+ELAPSEDM=$(($(($END-$START))/60))
+ELAPSEDS=$(($(($END-$START))-$ELAPSEDM*60))
+
+echo "--> Install Script completed in $ELAPSEDM minutes and $ELAPSEDS seconds"
+echo
