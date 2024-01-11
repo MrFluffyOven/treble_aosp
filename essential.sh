@@ -2,6 +2,7 @@ echo
 echo "------------------"
 echo " Installer Script "
 echo " by MrFluffyOven  " 
+echo "  Essential Only  " 
 echo "------------------"
 echo
 
